@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hip Life</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #D7CEFF, #6a97be);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #ffffff;
+
+}
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+}
+
+        header {
+            background-color: #cce7ff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #D1A8D1;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #DB77B8;
+         transform: scale(1.1);
+     transition: transform 0.3s ease;
+}
+        h1 {
+            font-size: 70px;
+        }
+        p {
+            font-size: 30px;
+            font-family: "schoolbell", serif;
+            font-weight: 400;
+            font-style: normal;
+            
+        }
+        /* Full-page overlay */
+#loading-spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Spinner style */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #cce7ff;
+    border-top: 5px solid #b39ddb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+    </style>
+    
+</head>
+<body>
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+    
+    <header>
+        <img src="Images/PELVIS.png" alt="The Hip Life Logo">
+    </header>
+
+    <div class="container">
+        <h1>WELCOME TO "THE HIP LIFE"</h1>
+        <p>Home of all hip-related content</p>
+
+        <a href="about.html" class="button">About</a>
+        <a href="downloads.html" class="button">Download My Work</a>
+        <a href="coffee.html" class="button">Help keep me drawing</a>
+       
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const spinner = document.getElementById('loading-spinner');
+            spinner.style.display = 'none';
+        });
+    </script>
+    
+</body>
+</html>
